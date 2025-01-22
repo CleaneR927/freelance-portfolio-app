@@ -1,0 +1,26 @@
+.navListLink {
+  color: var(--nav-text);
+  transition: opacity 0.2s ease-in;
+}
+
+.navListLink:hover {
+  opacity: 0.8;
+}
+
+.navListLinkActive {
+  color: inherit;
+  position: relative;
+}
+
+.navListLinkActive::before {
+  content: '';
+
+  position: absolute;
+  left: 0;
+  top: 100%;
+
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: var(--accent);
+}

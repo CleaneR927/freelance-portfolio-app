@@ -1,0 +1,48 @@
+@import '../../constants/variables.css';
+
+.container {
+  margin-block: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+.image {
+  width: 300px;
+  fill: var(--text-color, #000);
+}
+
+.title {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 1.4;
+  color: var(--title-1, #000);
+}
+
+.text {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.4;
+  color: var(--text-color, #000);
+}
+
+@media screen and (max-width: 650px) {
+  .container {
+    margin-block: 60px;
+    row-gap: 15px;
+  }
+
+  .image {
+    width: 200px;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .text {
+    font-size: 20px;
+  }
+}

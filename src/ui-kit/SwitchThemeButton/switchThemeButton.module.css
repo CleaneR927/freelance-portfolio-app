@@ -1,0 +1,49 @@
+@import '../../constants/variables.css';
+
+.container {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 51px;
+  height: 26px;
+  padding: 5px;
+  border-radius: 50px;
+  background-color: var(--switch-bg, #5c61ec9a);
+  overflow: hidden;
+  transition: background-color 0.2s ease-in;
+}
+
+.switchThemeButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: left 0.2s ease-in;
+  z-index: 10;
+}
+
+.switchThemeButtonActive::before {
+  left: 26px;
+}
+
+.switchThemeIcon {
+  position: relative;
+  width: inherit;
+  object-fit: contain;
+  z-index: 9;
+}
+
+@media (max-width: 650px) {
+  .switchThemeButton {
+    grid-column: 2 / 3;
+    justify-self: end;
+    order: 0;
+  }
+}

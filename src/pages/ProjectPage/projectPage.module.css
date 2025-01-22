@@ -1,0 +1,34 @@
+@import '../../constants/variables.css';
+
+.projectDetails {
+  margin: 0 auto;
+  max-width: 865px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+.projectDetailsCover {
+  max-width: 100%;
+  margin-bottom: 40px;
+  box-shadow: var(--box-shadow);
+  border-radius: 10px;
+}
+
+.projectDetailsDesc {
+  margin-bottom: 30px;
+
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.3;
+}
+
+@media (max-width: 620px) {
+  .projectDetailsDesc {
+    margin-bottom: 20px;
+    font-size: 22px;
+  }
+}

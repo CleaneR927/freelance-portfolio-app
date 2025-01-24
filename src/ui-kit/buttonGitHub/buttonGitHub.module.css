@@ -4,16 +4,16 @@
   display: flex;
   column-gap: 10px;
   align-items: center;
-
   height: 48px;
   padding: 12px 20px;
-
   border-radius: 5px;
   border: 1px solid #000;
   background-color: #fff;
   color: #000;
-
-  transition: opacity 0.2s ease-in;
+  scale: 1;
+  transition:
+    opacity 0.2s ease-in,
+    scale 0.2s ease-in-out;
 }
 
 .buttonOutline:hover {
@@ -22,5 +22,5 @@
 
 .buttonOutline:active {
   position: relative;
-  top: 1px;
+  scale: 0.95;
 }

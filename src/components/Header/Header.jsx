@@ -1,5 +1,5 @@
 import styles from './header.module.css';
-import portfolio from '../../accets/Portfolio.pdf';
+import smoke from '../../accets/smoke-background.mp4';
 
 export function Header() {
   const handleDownload = () => {
@@ -13,6 +13,10 @@ export function Header() {
 
   return (
     <header className={styles.header}>
+      <video autoPlay muted loop className={styles.backgroundVideo}>
+        <source src={smoke} type="video/mp4" />
+        Ваш браузер не поддерживает видео.
+      </video>
       <div className={styles.headerWrapper}>
         <h1 className={styles.headerTitle}>
           <strong>

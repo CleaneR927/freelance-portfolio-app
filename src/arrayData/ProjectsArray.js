@@ -4,7 +4,7 @@ import project3 from '../accets/projects/dantist.jpg';
 import project4 from '../accets/projects/slojno-sosredotochitsja.jpg';
 import project5 from '../accets/projects/zakribajushij-teg.jpg';
 import project6 from '../accets/projects/mesto.jpg';
-import project7 from '../accets/projects/mesto.jpg';
+import project7 from '../accets/projects/web-larek.png';
 import project8 from '../accets/projects/stellar-burger.jpg';
 import project9 from '../accets/projects/todos-app.jpg';
 

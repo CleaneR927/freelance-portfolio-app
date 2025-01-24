@@ -26,6 +26,7 @@
   --accent: var(--purple);
   --title-1: var(--accent);
 
+  --header-bg-human: url('../accets/human-in-light.jpg');
   --project-card-bg: var(--white);
   --project-card-text: var(--black);
   --box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.25);
@@ -40,6 +41,8 @@
     --accent: var(--purple);
     --title-1: var(--accent);
 
+    --header-bg: var(--light);
+    --header-bg-human: url('../accets/human-in-light.jpg');
     --project-card-bg: var(--white);
     --project-card-text: var(--black);
     --box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.25);
@@ -54,6 +57,8 @@
     --text-color: var(--white);
     --title-1: var(--white);
 
+    --header-bg: var(--black);
+    --header-bg-human: url('../accets/human-in-dark.jpg');
     --project-card-bg: var(--black);
     --project-card-text: var(--white);
     --box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.8);
@@ -68,6 +73,8 @@
   --accent: var(--purple);
   --title-1: var(--accent);
 
+  --header-bg: var(--light);
+  --header-bg-human: url('../accets/human-in-light.jpg');
   --project-card-bg: var(--white);
   --project-card-text: var(--black);
   --box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.25);
@@ -80,6 +87,8 @@
   --text-color: var(--white);
   --title-1: var(--white);
 
+  --header-bg: var(--black);
+  --header-bg-human: url('../accets/human-in-dark.jpg');
   --project-card-bg: var(--black);
   --project-card-text: var(--white);
   --box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.8);

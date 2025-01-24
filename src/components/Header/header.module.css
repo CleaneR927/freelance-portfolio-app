@@ -1,26 +1,65 @@
 @import '../../constants/variables.css';
 
 .header {
-  padding: 40px 0;
-  min-height: 695px;
-
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-
+  padding: 40px 0;
+  min-height: 695px;
   background-color: var(--header-bg);
   background-image: url('../../accets/header-bg.png');
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: 50%;
   background-position: center center;
-
   color: var(--header-text);
   text-align: center;
+  overflow: hidden;
+}
+
+.header::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('../../accets/light.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center -400px;
+  animation: light 8s linear infinite;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  background: var(--header-bg-human, #fff);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  mix-blend-mode: multiply;
+  opacity: 0.6;
+}
+
+.backgroundVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 .headerWrapper {
   padding: 0 15px;
   max-width: 660px;
+  position: relative;
+  z-index: 1;
 }
 
 .headerTitle {
@@ -50,20 +89,16 @@
   margin-top: 0.5em;
 }
 
-/* Btn */
-
 .button {
   display: inline-block;
   height: 48px;
   padding: 12px 28px;
-
   border-radius: 5px;
   background-color: var(--accent);
   color: var(--white);
   letter-spacing: 0.15px;
   font-size: 16px;
   font-weight: 500;
-
   transition: opacity 0.2s ease-in;
 }
 
@@ -76,9 +111,52 @@
   top: 1px;
 }
 
+@keyframes light {
+  0% {
+    opacity: 0.1;
+  }
+
+  50% {
+    opacity: 0.25;
+  }
+
+  100% {
+    opacity: 0.1;
+  }
+}
+
+@media (max-width: 1440px) {
+  .header::after {
+    background-position: center -250px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .header {
+    background-size: 80%;
+  }
+
+  .header::after {
+    background-position: center -150px;
+  }
+
+  .header::before {
+    background-size: auto;
+  }
+}
+
 @media (max-width: 620px) {
   .header {
     min-height: unset;
+  }
+
+  .header::after {
+    background-position: center -100px;
+  }
+
+  .header::before {
+    background-size: cover;
+    background-position: center;
   }
 
   .headerTitle {
@@ -87,5 +165,19 @@
 
   .headerTitle strong {
     font-size: 40px;
+  }
+}
+
+@media (max-width: 420px) {
+  .header::after {
+    background-position: center -50px;
+  }
+
+  .headerTitle {
+    font-size: 20px;
+  }
+
+  .headerTitle strong {
+    font-size: 30px;
   }
 }
